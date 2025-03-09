@@ -33,8 +33,8 @@
 
     <!-- Title -->
     <title>
-      Blocks as Probes: Dissecting Categorization Ability of Large Multimodal
-      Models
+      GS-LTS: 3D Gaussian Splatting-Based Adaptive Modeling for Long-Term
+      Service Robots
     </title>
     <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
     <link
@@ -66,22 +66,18 @@
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <h1 class="title is-1 publication-title">
-                Blocks as Probes: Dissecting Categorization Ability of Large
-                Multimodal Models
+                GS-LTS: 3D Gaussian Splatting-Based Adaptive Modeling for
+                Long-Term Service Robots
               </h1>
               <div class="is-size-5 publication-authors">
                 <!-- Paper authors -->
                 <span class="author-block">
                   <!-- TODO: -->
                   <a href="https://github.com/FuBin29" target="_blank">Bin Fu</a
-                  ><sup>*</sup>,</span
-                >
-                <span class="author-block">
-                  <a href="https://github.com/WanQiyang" target="_blank"
-                    >Qiyang Wan</a
-                  ><sup>*</sup>,</span
+                  >,</span
                 >
                 <span class="author-block"> Jialin Li,</span>
+                <span class="author-block"> Bin Zhang,</span>
                 <span class="author-block">
                   <a href="https://rpwang.net" target="_blank">Ruiping Wang</a
                   >,</span
@@ -98,20 +94,19 @@
               <div class="is-size-5 publication-authors">
                 <span class="author-block"
                   >Institute of Computing Technology, Chinese Academy of
-                  Sciences<br />BMVC 2024</span
+                  Sciences<br />Submit to IROS 2025</span
                 >
-                <span class="eql-cntrb"
+                <!-- <span class="eql-cntrb"
                   ><small
                     ><br /><sup>*</sup> Indicates Equal Contribution</small
                   ></span
-                >
+                > -->
               </div>
 
               <div class="column has-text-centered">
                 <div class="publication-links">
                   <!-- Arxiv PDF link -->
-                  <span class="link-block">
-                    <!-- TODO: -->
+                  <!-- <span class="link-block">
                     <a
                       href="https://bmva-archive.org.uk/bmvc/2024/papers/Paper_887/paper.pdf"
                       target="_blank"
@@ -122,12 +117,12 @@
                       </span>
                       <span>Paper</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
                     <a
-                      href="https://github.com/FuBin29/Blocks-as-Probes"
+                      href="https://github.com/VIPL-VSU/3DGS-LTS"
                       target="_blank"
                       class="external-link button is-normal is-rounded is-dark"
                     >
@@ -139,8 +134,7 @@
                   </span>
 
                   <!-- ArXiv abstract Link -->
-                  <span class="link-block">
-                    <!-- TODO: -->
+                  <!-- <span class="link-block">
                     <a
                       href="https://arxiv.org/pdf/2409.01560"
                       target="_blank"
@@ -151,7 +145,7 @@
                       </span>
                       <span>arXiv</span>
                     </a>
-                  </span>
+                  </span> -->
                 </div>
               </div>
             </div>
@@ -159,6 +153,18 @@
         </div>
       </div>
     </section>
+
+    <!-- Teaser video-->
+    <!-- <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <video poster="" id="tree" autoplay controls muted loop height="100%">
+            <source src="static/videos/GS-LTS-hires.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </section> -->
+    <!-- End teaser video -->
 
     <!-- Paper abstract -->
     <section class="section hero is-light">
@@ -168,34 +174,28 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Categorization, a core cognitive ability in humans that
-                organizes objects based on common features, is essential to
-                cognitive science as well as computer vision. To evaluate the
-                categorization ability of visual AI models, various proxy tasks
-                on recognition from datasets to open world scenarios have been
-                proposed. Recent development of Large Multimodal Models (LMMs)
-                has demonstrated impressive results in high-level visual tasks,
-                such as visual question answering, video temporal reasoning,
-                etc., utilizing the advanced architectures and large-scale
-                multimodal instruction tuning. Previous researchers have
-                developed holistic benchmarks to measure the high-level visual
-                capability of LMMs, but there is still a lack of pure and
-                in-depth quantitative evaluation of the most fundamental
-                categorization ability. According to the research on human
-                cognitive process, categorization can be seen as including two
-                parts: category learning and category use. Inspired by this, we
-                propose a novel, challenging, and efficient benchmark based on
-                composite blocks, called ComBo, which provides a disentangled
-                evaluation framework and covers the entire categorization
-                process from learning to use. By analyzing the results of
-                multiple evaluation tasks, we find that although LMMs exhibit
-                acceptable generalization ability in learning new categories,
-                there are still gaps compared to human in many ways, such as
-                spatial detail fine-grained perception of spatial relationship
-                and abstract category understanding. Through the study of
-                categorization, we can provide inspiration for the further
-                development of LMMs in terms of interpretability and
-                generalization.
+                3D Gaussian Splatting (3DGS) has garnered significant attention
+                in robotics for its explicit, high fidelity dense scene
+                representation, demonstrating strong potential for robotic
+                applications. However, 3DGS-based methods in robotics primarily
+                focus on static scenes, with limited attention to the dynamic
+                scene changes essential for long-term service robots. These
+                robots demand sustained task execution and efficient scene
+                updates—challenges current approaches fail to meet. To address
+                these limitations, we propose GS-LTS (Gaussian Splatting for
+                Long-Term Service), a 3DGS-based system enabling indoor robots
+                to manage diverse tasks in dynamic environments over time.
+                GS-LTS detects scene changes (e.g., object addition or removal)
+                via single-image change detection, employs a rule-based policy
+                to autonomously collect multi-view observations, and efficiently
+                updates the scene representation through Gaussian editing.
+                Additionally, we propose a simulation-based benchmark that
+                automatically generates scene change data as compact
+                configuration scripts, providing a standardized, user-friendly
+                evaluation benchmark. Experimental results demonstrate GS-LTS's
+                advantages in reconstruction, navigation, and superior scene
+                updates—faster and higher quality than the image training
+                baseline—advancing 3DGS for long-term robotic operations.
               </p>
             </div>
           </div>
@@ -210,19 +210,22 @@
         <div class="container is-max-desktop content">
           <div class="columns is-centered">
             <div class="column is-full">
-              <h2 class="title is-3">What is Categorization?</h2>
+              <h2 class="title is-3">Common Scene Changes</h2>
               <div class="content has-text-justified">
-                <img
-                  src="static/images/fig1.png"
-                  alt="Sizes of model trees"
-                  class="blend-img-background center-image"
-                  style="margin: 20px auto; display: block"
-                />
+                <div style="display: flex; justify-content: center; margin: 20px 0;">
+                  <img
+                    src="static/images/fig-head.png"
+                    alt="Common Scene Changes"
+                    class="blend-img-background"
+                    style="max-width: 75%; height: auto;"
+                  />
+                </div>
                 <p>
-                  Categorization is a fundamental human cognitive ability.
-                  Research in cognitive science suggests that categorization
-                  involves two key processes: category learning and category
-                  use.
+                  The real-world environments involves object changes, as
+                  illustrated in the figure. In such environments, the robot
+                  must continuously observe the scene, autonomously detect
+                  changes, and update its scene representation to maintain
+                  accuracy.
                 </p>
               </div>
             </div>
@@ -237,22 +240,37 @@
           <div class="columns is-centered">
             <div class="column is-full">
               <div class="content">
-                <h2 class="title is-3">Cognitive Process of Categorization</h2>
+                <h2 class="title is-3">GS-LTS System</h2>
                 <div class="level-set has-text-justified">
                   <p>
                     <img
-                      src="static/images/fig2.png"
+                      src="static/images/fig-main.png"
                       alt="Sizes of model trees"
                       class="blend-img-background center-image"
                       style="max-width: 100%; height: auto"
                     />
                   </p>
                   <p>
-                    We model categorization as a process of category learning
-                    and use across concrete and abstract spaces. The concrete
-                    space includes perceivable visual entities in the real
-                    world, while the abstract space represents the
-                    categorization rules stored by both humans and LMMs.
+                    we propose GS-LTS, a 3DGS-based system designed for
+                    Long-Term Service robots in indoor environments. The GS-LTS
+                    framework integrates four key modules: (1) Gaussian Mapping
+                    Engine, which constructs a semantic-aware 3DGS
+                    representation, integrating geometry, visual appearance, and
+                    semantics; (2) Multi-Task Executor, which helps robots
+                    perform downstream tasks like object navigation using the
+                    informative 3DGS representation; (3) Change Detection Unit,
+                    a long-running module that detects scene changes at a
+                    specified frequency by comparing the robot's current RGB
+                    observations with historical 3DGS-rendered images, locating
+                    altered regions and analyzing change types and positions;
+                    and (4) Active Scene Updater, which is guided by a
+                    rule-based policy, directs the robot to collect multi-view
+                    images around detected areas, and applies pre-editing and
+                    fine-tuning to dynamically update the 3DGS representation
+                    based on the detect change type and new observations.
+                    Together, these components enable the robot to adapt to
+                    evolving surroundings while maintaining robust performance
+                    over extended periods.
                   </p>
                 </div>
               </div>
@@ -267,20 +285,23 @@
         <div class="container is-max-desktop content">
           <div class="columns is-centered">
             <div class="column is-full">
-              <h2 class="title is-3">ComBo Benchmark</h2>
+              <h2 class="title is-3">Experiments</h2>
               <div class="content has-text-justified">
-                <img
-                  src="static/images/fig3.png"
-                  alt="Sizes of model trees"
-                  class="blend-img-background center-image"
-                  style="margin: 20px auto; display: block"
-                />
+                <div style="display: flex; justify-content: center; margin: 20px 0;">
+                  <img
+                    src="static/images/fig-update.png"
+                    alt="Common Scene Changes"
+                    class="blend-img-background"
+                    style="max-width: 80%; height: auto;"
+                  />
+                </div>
                 <p>
-                  We build a large-scale repository of Composite Blocks by
-                  disentangling object attributes such as shape, material,
-                  color, and contact points. This results in 9,504 objects, each
-                  rendered from random viewpoints to create photorealistic
-                  images.
+                  This figure presents the quantitative results of GS-LTS,
+                  showcasing one representative case from each of three scene
+                  changes. The rendering results more intuitively demonstrate
+                  that GS-LTS achieves superior and faster scene update
+                  capabilities, while the baseline method requires significantly
+                  more iterations to obtain comparable outcomes.
                 </p>
               </div>
             </div>
@@ -298,20 +319,17 @@
                 <h2 class="title is-3">Conclusion</h2>
                 <div class="level-set has-text-justified">
                   <p>
-                    In this work, we introduce the ComBo benchmark, focusing on
-                    evaluating the categorization capability of Large Multimodal
-                    Models (LMMs). Inspired by research on categorization in
-                    cognitive science, we design three evaluation tasks from
-                    different perspectives, comprehensively assessing the LMMs'
-                    ability in pattern perception, abstract concept alignment,
-                    and generalization of categorization. The evaluation results
-                    reveal that LMMs still exhibit deficiencies in spatial
-                    detail perception, abstract concept reasoning, and learning
-                    of new categories. Although in-context learning or
-                    Chain-of-Thought (CoT) techniques can further improve the
-                    performance of LMMs, there remains a gap compared to human
-                    categorization capability, providing recommendations for
-                    future improvements in LMMs.
+                    In this work, we introduce GS-LTS, a 3DGS-based system
+                    designed for long-term service robots operating in dynamic
+                    environments. By integrating object-level change detection,
+                    multi-view observation, and efficient Gaussian editing-based
+                    scene updates, GS-LTS enables robots to adapt to scene
+                    variations over time. Additionally, we propose a scalable
+                    simulation benchmark for evaluating object-level scene
+                    changes, facilitating systematic assessment and sim-to-real
+                    transfer. Experimental results demonstrate that GS-LTS
+                    achieves faster and higher-quality scene updates, advancing
+                    the applicability of 3DGS for long-term robotic operations.
                   </p>
                 </div>
               </div>
@@ -322,7 +340,7 @@
     </section>
 
     <!--BibTex citation -->
-    <section class="section" id="BibTeX">
+    <!-- <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
         <pre><code>
@@ -335,7 +353,7 @@
         }
       </code></pre>
       </div>
-    </section>
+    </section> -->
     <!--End BibTex citation -->
 
     <footer class="footer">
